@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Inventory.Models.Product
+
+<h4>Add a product.</h4>
+@using (Html.BeginForm())
+{
+  @Html.Label("Name")
+  @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "Enter name." })
+
+  @Html.Label("Collection: ")
+  @Html.TextBoxFor(model => model.Collection, new { @class = "form-control", placeholder = "Enter collection type: (Rocks, cards, etc.)" })
+
+  @Html.Label("Description: ")
+  @Html.TextBoxFor(model => model.Description, new { @class = "form-control", placeholder = "Description" })
+  
+  <input type="submit" value="Add Product"/>
+
+}
+<p>@Html.ActionLink("Show Products", "Index")</p>
+@* <p>@Html.ActionLink("Back To Products page", "Index", "Products")</p> *@
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

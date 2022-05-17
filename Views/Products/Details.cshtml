@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Inventory.Models.Product
+
+<h2>Collection Details</h2>
+<hr />
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdjtXvFZap3gKghOSwToK75f3JiWdSUFRV9iOg4rt91WLn2FEvHSd6UZWYXUzbkrSKd_o&usqp=CAU">
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.Label("Hobby"): @Html.DisplayFor(model => model.Collection)</h3>
+<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
+<p>@Html.ActionLink("Back to list", "Index")</p>
